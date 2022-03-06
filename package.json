@@ -1,0 +1,14 @@
+{
+  "name": "bff-layer",
+  "version": "1.0.0",
+  "description": "The bff layer for my portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chcustodio97",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^4.4.1"
+  }
+}
