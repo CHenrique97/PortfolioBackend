@@ -1,10 +1,30 @@
 import { MongoClient, ServerApiVersion } from 'mongodb';
-import uri from "./password"
+import express from "express";
+import uri from "./password.js";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-const uri =
-client.connect(err => {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
-});
 
+const run =  async () =>{
+  try{
+  await client.connect()
+  const collection = client.db("ProjectDatabase").collection("PjtDb");
+  const result = await collection.findOne({code:"97"});
+  delete result._id;
+  delete result.code;
+  return result;
+}
+  finally {
+    await client.close();
+  }
+
+}
+
+
+const app = express();
+const port = 4200;
+
+app.get('/portfolio', (req, res) => {
+  run().then(response =>{
+    res.send(response);
+  });
+
+})

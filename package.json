@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "The bff layer for my portfolio",
   "main": "index.js",
+  "start": "node node.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "chcustodio97",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.3",
     "mongodb": "^4.4.1"
   }
 }
