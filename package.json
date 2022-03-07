@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node node.js"
+    "start": "node index.js"
   },
   "author": "chcustodio97",
   "license": "ISC",
