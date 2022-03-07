@@ -1,4 +1,5 @@
 import { MongoClient, ServerApiVersion } from 'mongodb';
+const PORT = process.env.PORT || 3000;
 import express from "express";
 import uri from "./password.js";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
@@ -20,7 +21,7 @@ const run =  async () =>{
 
 
 const app = express();
-const port = 4200;
+const port = PORT;
 
 app.get('/portfolio', (req, res) => {
   run().then(response =>{
