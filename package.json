@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "The bff layer for my portfolio",
   "main": "index.js",
-  "start": "node node.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node node.js"
   },
   "author": "chcustodio97",
   "license": "ISC",
